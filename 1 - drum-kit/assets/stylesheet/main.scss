@@ -1,0 +1,42 @@
+@import url("base.css");
+
+*,*:before, *:after {
+	box-sizing: border-box;
+}
+
+body {
+	height: 100vh;
+	width: 100vw;
+	background: url("../media/bg.jpg") center; 
+}
+
+.keys {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	display: grid;
+	grid-template-columns: repeat(9, 1fr);
+	grid-gap: 30px;
+	align-items: center;
+
+	.key {
+		padding: 20px;
+		height: 100px;
+		width: 100px;
+		display: flex;
+		justify-content: space-around;
+		align-items: center;
+		transition: all 0.07s;
+		background-color: rgba(0,0,0,0.5);
+		color: #fff;
+		border: 5px solid #000;
+		font-size: 40px;
+	}
+}
+
+.playing {
+	transform: scale(1.1);
+	border-color: #ffc600;
+	box-shadow: 0 0 0px 6px #ffc600;
+}
